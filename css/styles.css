@@ -77,16 +77,6 @@ a {
   padding-right: 15px;
 }
 
-@keyframes hidden-opacity {
-  0% {
-    opacity: 100%;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
 /* -------------header------------- */
 
 .header {
@@ -751,7 +741,10 @@ a {
   position: absolute;
   left: 50%;
   top: 50%;
+  transition-property: transform;
   transform: translate(-50%, -50%);
+  transition-duration: 2500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn {
@@ -772,10 +765,6 @@ a {
 }
 
 .is-hidden {
-  animation-name: hidden-opacity;
-  animation-duration: 2500ms;
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
   visibility: hidden;
   pointer-events: none;
 }
