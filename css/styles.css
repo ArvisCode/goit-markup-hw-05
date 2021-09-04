@@ -236,9 +236,6 @@ a {
   border-radius: 4px;
 }
 
-.advantages-icon {
-}
-
 .advantages-title {
   font-weight: 700;
   font-size: 14px;
@@ -560,6 +557,42 @@ a {
 
 .gallery-item:nth-last-child(n + 4) {
   margin-bottom: 30px;
+}
+
+.gallery-overlay {
+  position: relative;
+
+  overflow: hidden;
+}
+
+/* ------overlay------ */
+.overlay {
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+
+  background-color: rgba(33, 150, 243, 0.9);
+
+  padding: 63px 24px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  transition-property: transform;
+  transform: translateY(100%);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-item:hover .overlay,
+.gallery-overlay:focus .overlay {
+  transform: translateY(0);
+
+  overflow: auto;
 }
 
 .gallery-item:focus,
